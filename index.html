@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aditya Raj Singh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Aditya Raj Singh</h1>
+    <p>Aspiring Full Stack Developer | Java DSA Enthusiast | Data Science Enthusiast</p>
+    <nav>
+      <button class="tab-btn active" data-tab="about">About</button>
+      <button class="tab-btn" data-tab="skills">Skills</button>
+      <button class="tab-btn" data-tab="projects">Projects</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="tab active">
+      <div class="card">
+        <h2>About Me</h2>
+        <p>
+          I'm a third-year B.Tech student at NIT Nagaland, passionate about building real-world projects while consistently improving my problem-solving skills in <strong>Data Structures and Algorithms using Java</strong>.
+        </p>
+        <p>
+          I actively develop full-stack and frontend applications, blending creativity with logic. At the same time, I solve DSA problems regularly on platforms like LeetCode using Java to strengthen my core coding foundations.
+        </p>
+        <p>
+          Outside of tech, I'm a dedicated <strong>cricket player</strong> and sports enthusiast. I’ve represented my college in Inter-NIT tournaments, and the discipline I’ve gained from sports fuels my teamwork and focus in both tech and academics.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="tab">
+      <div class="card">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li>Languages: Java (Core), JavaScript, Python, C</li>
+          <li>DSA: Solving advanced problems using Java (LeetCode, Namaste DSA)</li>
+          <li>Web: HTML, CSS, Bootstrap, Node.js, Express.js, MongoDB</li>
+          <li>Tools: Git, GitHub, VS Code, Postman, Figma</li>
+          <li>Libraries: Pandas, NumPy, Matplotlib</li>
+          <li>CS Concepts: OOP, DBMS, Operating Systems, Networking</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="tab">
+      <div class="card">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <h3>🌤️ Weather App</h3>
+          <p>Dynamic weather app using OpenWeather API, featuring real-time search and responsive UI.</p>
+          <a href="https://mausam-git-main-aditya23-labs-projects.vercel.app/" target="_blank">Live Demo</a> |
+          <a href="https://github.com/Aditya23-lab/weather-app" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+          <h3>📚 Exam Mate</h3>
+          <p>Fullstack platform to access/upload PYQs by branch, semester, and college with search and rating system.</p>
+          <a href="#">Live (Coming Soon)</a> |
+          <a href="https://github.com/Aditya23-lab/exam-mate" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+          <h3>📘 Exampal</h3>
+          <p>Smart exam preparation assistant for students. Includes coding prep tracker, flashcards, daily planner, and leaderboard features.</p>
+          <a href="#">Live</a> |
+          <a href="https://github.com/Aditya23-lab/exampal" target="_blank">GitHub</a>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="contact" class="tab">
+      <div class="card">
+        <h2>Get in Touch</h2>
+        <p>📧 <a href="mailto:adityaritus15@gmail.com">adityaritus15@gmail.com</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/in/aditya-raj-singh-2506a5310" target="_blank">LinkedIn</a></p>
+        <p>💻 <a href="https://github.com/Aditya23-lab" target="_blank">GitHub</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Aditya Raj Singh. Built with ❤️</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const tabs = document.querySelectorAll('.tab');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        tabs.forEach(tab => tab.classList.remove('active'));
+        const target = document.getElementById(btn.dataset.tab);
+        target.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

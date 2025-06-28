@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f0f4ff, #e6f0ff);
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #3a4cff;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background: #3a4cff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background: #2738c7;
+}
+
+nav button.active {
+  background: #2738c7;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  width: 100%;
+}
+
+.tab.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  position: relative;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
+.card h2 {
+  color: #3a4cff;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background: #f0f7ff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+}
+
+.project h3 {
+  color: #2b3fda;
+  margin-bottom: 0.3rem;
+}
+
+.project a {
+  color: #3a4cff;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #777;
+}
