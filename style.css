@@ -1,122 +1,234 @@
+/* ==== Reset & Base ==== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(to right, #f0f4ff, #e6f0ff);
-  color: #333;
-  padding: 20px;
+  background: linear-gradient(120deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
 }
 
+/* ==== Header ==== */
 header {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: #3a4cff;
+  color: #38bdf8;
 }
 
 header p {
   font-size: 1.1rem;
-  color: #666;
+  color: #cbd5e1;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
 }
 
+/* ==== Navigation ==== */
 nav {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 
-nav button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  background: #3a4cff;
-  color: white;
-  border: none;
-  border-radius: 12px;
+.tab-btn {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.3rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: 500;
 }
 
-nav button:hover {
-  background: #2738c7;
+.tab-btn:hover,
+.tab-btn.active {
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 12px #38bdf8;
 }
 
-nav button.active {
-  background: #2738c7;
-}
-
+/* ==== Main ==== */
 main {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  width: 90%;
+  max-width: 850px;
 }
 
+/* ==== Tabs Fix ==== */
 .tab {
-  position: absolute;
+  display: none;
   opacity: 0;
-  visibility: hidden;
   transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-  width: 100%;
 }
 
 .tab.active {
+  display: block;
   opacity: 1;
-  visibility: visible;
   transform: translateY(0);
-  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
+/* ==== Card Layout ==== */
 .card {
-  background: white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-  border-radius: 20px;
-  margin-top: 1rem;
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 1.7rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  margin-bottom: 1.7rem;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 .card h2 {
-  color: #3a4cff;
+  color: #38bdf8;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #38bdf8;
+  display: inline-block;
+  padding-bottom: 0.3rem;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+.card p, .card li {
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
-li {
-  background: #f0f7ff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+/* ==== Lists ==== */
+.card ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
 }
 
+/* ==== Projects ==== */
 .project {
-  margin-bottom: 1.5rem;
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(56, 189, 248, 0.3);
 }
 
 .project h3 {
-  color: #2b3fda;
-  margin-bottom: 0.3rem;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
 }
 
 .project a {
-  color: #3a4cff;
+  color: #38bdf8;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .project a:hover {
   text-decoration: underline;
 }
 
+/* ==== Footer ==== */
 footer {
+  margin-top: 2rem;
   text-align: center;
-  margin-top: 3rem;
-  color: #777;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+}
+
+/* ==== Toggle Button ==== */
+.toggle-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.toggle-btn {
+  background: #38bdf8;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  color: #0f172a;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+.toggle-btn:hover {
+  background: #0ea5e9;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+}
+
+/* ==== Dark Mode ==== */
+.dark-mode {
+  background: linear-gradient(120deg, #e2e8f0, #cbd5e1);
+  color: #0f172a;
+}
+
+.dark-mode header h1 {
+  color: #0284c7;
+}
+
+.dark-mode .card {
+  background: #f1f5f9;
+  color: #0f172a;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .project {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.dark-mode .tab-btn {
+  border-color: #0284c7;
+  color: #0284c7;
+}
+
+.dark-mode .tab-btn:hover,
+.dark-mode .tab-btn.active {
+  background: #0284c7;
+  color: white;
+}
+
+/* ==== Animations ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 0.8rem;
+    margin: 0.2rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  main {
+    width: 100%;
+  }
 }
