@@ -111,7 +111,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,8 +118,14 @@
   <title>Aditya Raj Singh | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Theme Toggle -->
+  <div class="toggle-container">
+    <button class="toggle-btn" id="theme-toggle">🌙 Dark Mode</button>
+  </div>
+
   <header>
     <h1>Aditya Raj Singh</h1>
     <p>Full Stack Developer | Data Science Enthusiast | Java DSA Learner</p>
@@ -134,24 +139,23 @@
   </header>
 
   <main>
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT -->
     <section id="about" class="tab active">
       <div class="card">
         <h2>About Me</h2>
         <p>
-          I’m <strong>Aditya Raj Singh</strong>, a 3rd-year B.Tech (EEE) student at <strong>NIT Nagaland</strong>. 
-          I love tackling new challenges — from solving <strong>180+ DSA problems in Java</strong> to building real-world web apps like 
-          <strong>Exam Mate</strong> and a <strong>House Price Prediction</strong> model.
+          I’m <strong>Aditya Raj Singh</strong>, a 3rd-year B.Tech (EEE) student at <strong>NIT Nagaland</strong>.
+          I love tackling new challenges — from solving <strong>180+ DSA problems in Java</strong> to building
+          real-world apps like <strong>Exam Mate</strong> and <strong>House Price Prediction</strong>.
         </p>
         <p>
-          I enjoy combining <strong>full-stack development</strong> with <strong>data science</strong>, and I’m now exploring 
-          <strong>RAG-based AI systems</strong> and <strong>MySQL</strong>. Known for my strong communication and teamwork skills, 
-          I thrive in both collaborative and independent settings.
+          I enjoy combining <strong>full-stack development</strong> with <strong>data science</strong> and
+          I’m currently exploring <strong>RAG-based AI systems</strong> and <strong>MySQL</strong>.
         </p>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- SKILLS -->
     <section id="skills" class="tab">
       <div class="card">
         <h2>Technical Skills</h2>
@@ -166,14 +170,14 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS -->
     <section id="projects" class="tab">
       <div class="card">
         <h2>Projects</h2>
 
         <div class="project">
           <h3>📘 Exam Mate – Student Resource Platform</h3>
-          <p>Full-stack platform for students to upload, view, and download exam papers and notes. Features authentication, file previews, filters, leaderboard, and feedback.</p>
+          <p>Full-stack platform where students can upload, view, and download exam papers and notes with authentication, filters, file previews, leaderboard, and feedback.</p>
           <p><strong>Stack:</strong> React.js, Tailwind CSS, Node.js, Express.js, MongoDB, JWT, Multer</p>
           <a href="https://exam-mate-3ty9.vercel.app" target="_blank">Live Demo</a> |
           <a href="https://github.com/Aditya23-lab/exam-mate" target="_blank">GitHub</a>
@@ -181,19 +185,18 @@
 
         <div class="project">
           <h3>🏠 House Price Predictor</h3>
-          <p>Regression-based ML model to predict real-estate prices using Python and scikit-learn. Includes preprocessing, feature engineering, and visualization.</p>
+          <p>Regression-based ML model predicting real-estate prices using Python and scikit-learn. Includes preprocessing, feature engineering, and data visualization.</p>
           <a href="https://github.com/Aditya23-lab/House-Price-Prediction" target="_blank">GitHub</a>
         </div>
 
         <div class="project">
           <h3>🤖 Mini RAG System (In Progress)</h3>
-          <p>AI-powered system that combines document retrieval with generative response models using embeddings and prompt engineering.</p>
+          <p>AI-powered retrieval-augmented generation system using embeddings and prompt engineering for efficient responses.</p>
         </div>
-
       </div>
     </section>
 
-    <!-- ACHIEVEMENTS SECTION -->
+    <!-- ACHIEVEMENTS -->
     <section id="achievements" class="tab">
       <div class="card">
         <h2>Achievements & Experience</h2>
@@ -202,13 +205,13 @@
           <li>Delegate – North East India Summit (IIT Guwahati)</li>
           <li>Participant – TEXMiN Innovation Challenge, NIT Nagaland</li>
           <li>Drone Workshop (NIELIT) – Hands-on drone design & flight</li>
-          <li><strong>MVP – Inter NIT Cricket Tournament</strong> (Top run scorer & wicket taker)</li>
+          <li><strong>MVP – Inter NIT Cricket Tournament</strong></li>
           <li>Solved 180+ DSA problems in Java</li>
         </ul>
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT -->
     <section id="contact" class="tab">
       <div class="card">
         <h2>Get in Touch</h2>
@@ -225,6 +228,7 @@
   </footer>
 
   <script>
+    // Tab switch
     const buttons = document.querySelectorAll('.tab-btn');
     const tabs = document.querySelectorAll('.tab');
 
@@ -232,11 +236,17 @@
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
         tabs.forEach(tab => tab.classList.remove('active'));
-        const target = document.getElementById(btn.dataset.tab);
-        target.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
       });
+    });
+
+    // Dark mode toggle
+    const toggleBtn = document.getElementById("theme-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleBtn.textContent =
+        document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
     });
   </script>
 </body>
