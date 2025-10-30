@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -88,6 +88,140 @@
 
   <footer>
     <p>© 2025 Aditya Raj Singh. Built with ❤️</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const tabs = document.querySelectorAll('.tab');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        tabs.forEach(tab => tab.classList.remove('active'));
+        const target = document.getElementById(btn.dataset.tab);
+        target.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aditya Raj Singh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Aditya Raj Singh</h1>
+    <p>Full Stack Developer | Data Science Enthusiast | Java DSA Learner</p>
+    <nav>
+      <button class="tab-btn active" data-tab="about">About</button>
+      <button class="tab-btn" data-tab="skills">Skills</button>
+      <button class="tab-btn" data-tab="projects">Projects</button>
+      <button class="tab-btn" data-tab="achievements">Achievements</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="tab active">
+      <div class="card">
+        <h2>About Me</h2>
+        <p>
+          I’m <strong>Aditya Raj Singh</strong>, a 3rd-year B.Tech (EEE) student at <strong>NIT Nagaland</strong>. 
+          I love tackling new challenges — from solving <strong>180+ DSA problems in Java</strong> to building real-world web apps like 
+          <strong>Exam Mate</strong> and a <strong>House Price Prediction</strong> model.
+        </p>
+        <p>
+          I enjoy combining <strong>full-stack development</strong> with <strong>data science</strong>, and I’m now exploring 
+          <strong>RAG-based AI systems</strong> and <strong>MySQL</strong>. Known for my strong communication and teamwork skills, 
+          I thrive in both collaborative and independent settings.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="tab">
+      <div class="card">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> Java, JavaScript, Python, C, MySQL</li>
+          <li><strong>Frontend:</strong> HTML, CSS, Tailwind CSS, React.js, shadcn/ui</li>
+          <li><strong>Backend:</strong> Node.js, Express.js, MongoDB, REST APIs</li>
+          <li><strong>Data Science:</strong> Pandas, NumPy, scikit-learn, Regression, Visualization</li>
+          <li><strong>Tools:</strong> Git, GitHub, VS Code, Postman, Figma</li>
+          <li><strong>Concepts:</strong> JWT Auth, Multer, Responsive Design, RAG Systems</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="tab">
+      <div class="card">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <h3>📘 Exam Mate – Student Resource Platform</h3>
+          <p>Full-stack platform for students to upload, view, and download exam papers and notes. Features authentication, file previews, filters, leaderboard, and feedback.</p>
+          <p><strong>Stack:</strong> React.js, Tailwind CSS, Node.js, Express.js, MongoDB, JWT, Multer</p>
+          <a href="https://exam-mate-3ty9.vercel.app" target="_blank">Live Demo</a> |
+          <a href="https://github.com/Aditya23-lab/exam-mate" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+          <h3>🏠 House Price Predictor</h3>
+          <p>Regression-based ML model to predict real-estate prices using Python and scikit-learn. Includes preprocessing, feature engineering, and visualization.</p>
+          <a href="https://github.com/Aditya23-lab/House-Price-Prediction" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+          <h3>🤖 Mini RAG System (In Progress)</h3>
+          <p>AI-powered system that combines document retrieval with generative response models using embeddings and prompt engineering.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="tab">
+      <div class="card">
+        <h2>Achievements & Experience</h2>
+        <ul>
+          <li>Campus Ambassador & Contributor at <strong>GSSoC 2025</strong></li>
+          <li>Delegate – North East India Summit (IIT Guwahati)</li>
+          <li>Participant – TEXMiN Innovation Challenge, NIT Nagaland</li>
+          <li>Drone Workshop (NIELIT) – Hands-on drone design & flight</li>
+          <li><strong>MVP – Inter NIT Cricket Tournament</strong> (Top run scorer & wicket taker)</li>
+          <li>Solved 180+ DSA problems in Java</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="tab">
+      <div class="card">
+        <h2>Get in Touch</h2>
+        <p>📧 <a href="mailto:sandilyaa577@gmail.com">sandilyaa577@gmail.com</a></p>
+        <p>🔗 <a href="https://linkedin.com/in/aditya-raj-singh-2506a5310" target="_blank">LinkedIn</a></p>
+        <p>💻 <a href="https://github.com/Aditya23-lab" target="_blank">GitHub</a></p>
+        <p>🌐 <a href="https://portfolio-pje0j2zv5-aditya23-labs-projects.vercel.app" target="_blank">Portfolio</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Aditya Raj Singh. Built with ❤️ using HTML, CSS & JavaScript.</p>
   </footer>
 
   <script>
