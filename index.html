@@ -1,115 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Aditya Raj Singh | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Aditya Raj Singh</h1>
-    <p>Aspiring Full Stack Developer | Java DSA Enthusiast | Data Science Enthusiast</p>
-    <nav>
-      <button class="tab-btn active" data-tab="about">About</button>
-      <button class="tab-btn" data-tab="skills">Skills</button>
-      <button class="tab-btn" data-tab="projects">Projects</button>
-      <button class="tab-btn" data-tab="contact">Contact</button>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about" class="tab active">
-      <div class="card">
-        <h2>About Me</h2>
-        <p>
-          I'm a third-year B.Tech student at NIT Nagaland, passionate about building real-world projects while consistently improving my problem-solving skills in <strong>Data Structures and Algorithms using Java</strong>.
-        </p>
-        <p>
-          I actively develop full-stack and frontend applications, blending creativity with logic. At the same time, I solve DSA problems regularly on platforms like LeetCode using Java to strengthen my core coding foundations.
-        </p>
-        <p>
-          Outside of tech, I'm a dedicated <strong>cricket player</strong> and sports enthusiast. I’ve represented my college in Inter-NIT tournaments, and the discipline I’ve gained from sports fuels my teamwork and focus in both tech and academics.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills" class="tab">
-      <div class="card">
-        <h2>Technical Skills</h2>
-        <ul>
-          <li>Languages: Java (Core), JavaScript, Python, C</li>
-          <li>DSA: Solving advanced problems using Java (LeetCode, Namaste DSA)</li>
-          <li>Web: HTML, CSS, Bootstrap, Node.js, Express.js, MongoDB</li>
-          <li>Tools: Git, GitHub, VS Code, Postman, Figma</li>
-          <li>Libraries: Pandas, NumPy, Matplotlib</li>
-          <li>CS Concepts: OOP, DBMS, Operating Systems, Networking</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects" class="tab">
-      <div class="card">
-        <h2>Projects</h2>
-
-        <div class="project">
-          <h3>🌤️ Weather App</h3>
-          <p>Dynamic weather app using OpenWeather API, featuring real-time search and responsive UI.</p>
-          <a href="https://mausam-git-main-aditya23-labs-projects.vercel.app/" target="_blank">Live Demo</a> |
-          <a href="https://github.com/Aditya23-lab/weather-app" target="_blank">GitHub</a>
-        </div>
-
-        <div class="project">
-          <h3>📚 Exam Mate</h3>
-          <p>Fullstack platform to access/upload PYQs by branch, semester, and college with search and rating system.</p>
-          <a href="#">Live (Coming Soon)</a> |
-          <a href="https://github.com/Aditya23-lab/exam-mate" target="_blank">GitHub</a>
-        </div>
-
-        <div class="project">
-          <h3>📘 Exampal</h3>
-          <p>Smart exam preparation assistant for students. Includes coding prep tracker, flashcards, daily planner, and leaderboard features.</p>
-          <a href="#">Live</a> |
-          <a href="https://github.com/Aditya23-lab/exampal" target="_blank">GitHub</a>
-        </div>
-        
-      </div>
-    </section>
-
-    <section id="contact" class="tab">
-      <div class="card">
-        <h2>Get in Touch</h2>
-        <p>📧 <a href="mailto:adityaritus15@gmail.com">adityaritus15@gmail.com</a></p>
-        <p>🔗 <a href="https://www.linkedin.com/in/aditya-raj-singh-2506a5310" target="_blank">LinkedIn</a></p>
-        <p>💻 <a href="https://github.com/Aditya23-lab" target="_blank">GitHub</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Aditya Raj Singh. Built with ❤️</p>
-  </footer>
-
-  <script>
-    const buttons = document.querySelectorAll('.tab-btn');
-    const tabs = document.querySelectorAll('.tab');
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        tabs.forEach(tab => tab.classList.remove('active'));
-        const target = document.getElementById(btn.dataset.tab);
-        target.classList.add('active');
-      });
-    });
-  </script>
-</body>
-</html> -->
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -118,18 +6,33 @@
   <title>Aditya Raj Singh | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Theme Toggle -->
-  <div class="toggle-container">
-    <button class="toggle-btn" id="theme-toggle">🌙 Dark Mode</button>
-  </div>
+  <div class="bg-gradient"></div>
 
-  <header>
-    <h1>Aditya Raj Singh</h1>
-    <p>Full Stack Developer | Data Science Enthusiast | Java DSA Learner</p>
-    <nav>
+  <header class="hero glass-card">
+    <div class="hero-top">
+      <div>
+        <h1>Aditya Raj Singh</h1>
+        <p class="hero-subtitle">
+          Full Stack Developer · Java DSA · Data Science & RAG Enthusiast
+        </p>
+        <p class="hero-meta">
+          3rd-year B.Tech (EEE), NIT Nagaland · Bihar, India
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-links">
+      <a href="mailto:sandilyaa577@gmail.com" target="_blank">📧 Email</a>
+      <a href="https://linkedin.com/in/aditya-raj-singh-2506a5310" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/Aditya23-lab" target="_blank">💻 GitHub</a>
+      <a href="https://portfolio-pje0j2zv5-aditya23-labs-projects.vercel.app" target="_blank">🌐 Current Portfolio</a>
+      <a href="https://leetcode.com/u/aad_it_ya/" target="_blank">🏆LeetCode</a></p>
+
+    </div>
+
+    <nav class="tabs">
       <button class="tab-btn active" data-tab="about">About</button>
       <button class="tab-btn" data-tab="skills">Skills</button>
       <button class="tab-btn" data-tab="projects">Projects</button>
@@ -141,113 +44,219 @@
   <main>
     <!-- ABOUT -->
     <section id="about" class="tab active">
-      <div class="card">
+      <div class="glass-card section-card">
         <h2>About Me</h2>
         <p>
-          I’m <strong>Aditya Raj Singh</strong>, a 3rd-year B.Tech (EEE) student at <strong>NIT Nagaland</strong>.
-          I love tackling new challenges — from solving <strong>180+ DSA problems in Java</strong> to building
-          real-world apps like <strong>Exam Mate</strong> and <strong>House Price Prediction</strong>.
+          I’m a 3rd-year B.Tech (EEE) student at <strong>NIT Nagaland</strong>, actively focused on
+          <strong>Data Structures &amp; Algorithms in Java</strong>, with
+          <strong>200+ LeetCode problems</strong> solved. I love building practical, impactful applications –
+          from <strong>Exam Mate</strong>, a student resource platform, to a
+          <strong>House Price Prediction model</strong>, and I’m currently exploring
+          <strong>RAG-based AI systems</strong> and video knowledge retrieval.
         </p>
         <p>
-          I enjoy combining <strong>full-stack development</strong> with <strong>data science</strong> and
-          I’m currently exploring <strong>RAG-based AI systems</strong> and <strong>MySQL</strong>.
+          On the development side, I work with <strong>React.js, Tailwind CSS, Node.js, Express.js, and MongoDB</strong>
+          to build full-stack applications with authentication, filters, file uploads, and clean UI/UX.
+          I enjoy taking projects from idea → deployment while writing maintainable, readable code.
         </p>
+        <p>
+          Beyond tech, I’m a passionate <strong>cricket player</strong> and have been
+          <strong>MVP in Inter NIT Cricket</strong> tournaments. The discipline and teamwork from sports
+          directly reflect in how I collaborate, communicate, and own my responsibilities in technical work.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">LeetCode Problems</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3rd Year</span>
+            <span class="stat-label">B.Tech (EEE)</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">7.7</span>
+            <span class="stat-label">CGPA (till 4th sem)</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="tab">
-      <div class="card">
+      <div class="glass-card section-card">
         <h2>Technical Skills</h2>
-        <ul>
-          <li><strong>Languages:</strong> Java, JavaScript, Python, C, MySQL</li>
-          <li><strong>Frontend:</strong> HTML, CSS, Tailwind CSS, React.js, shadcn/ui</li>
-          <li><strong>Backend:</strong> Node.js, Express.js, MongoDB, REST APIs</li>
-          <li><strong>Data Science:</strong> Pandas, NumPy, scikit-learn, Regression, Visualization</li>
-          <li><strong>Tools:</strong> Git, GitHub, VS Code, Postman, Figma</li>
-          <li><strong>Concepts:</strong> JWT Auth, Multer, Responsive Design, RAG Systems</li>
-        </ul>
+        <div class="skills-grid">
+          <div class="skill-block">
+            <h3>Languages</h3>
+            <p>Java, JavaScript, Python, C, MySQL</p>
+          </div>
+          <div class="skill-block">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, Tailwind, React.js, Node.js, Express.js, MongoDB, shadcn/ui</p>
+          </div>
+          <div class="skill-block">
+            <h3>Data Science &amp; ML</h3>
+            <p>Pandas, NumPy, scikit-learn, Regression</p>
+          </div>
+          <div class="skill-block">
+            <h3>Tools</h3>
+            <p>Git, GitHub, VS Code, Postman, Figma</p>
+          </div>
+          <div class="skill-block">
+            <h3>Concepts</h3>
+            <p>REST APIs, JWT Auth, Multer, Responsive Design, RAG Systems</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="tab">
-      <div class="card">
+      <div class="glass-card section-card">
         <h2>Projects</h2>
 
-        <div class="project">
-          <h3>📘 Exam Mate – Student Resource Platform</h3>
-          <p>Full-stack platform where students can upload, view, and download exam papers and notes with authentication, filters, file previews, leaderboard, and feedback.</p>
-          <p><strong>Stack:</strong> React.js, Tailwind CSS, Node.js, Express.js, MongoDB, JWT, Multer</p>
-          <a href="https://exam-mate-3ty9.vercel.app" target="_blank">Live Demo</a> |
-          <a href="https://github.com/Aditya23-lab/exam-mate" target="_blank">GitHub</a>
-        </div>
+        <div class="projects-grid">
+          <!-- Exam Mate -->
+          <article class="project-card">
+            <h3>📚 Exam Mate – Student Resource Platform</h3>
+            <p>
+              Full-stack platform for uploading, viewing, and downloading exam papers across branches and semesters.
+              Includes authentication, previews, filters, leaderboard, and feedback system. Currently hosts
+              <strong>100+ uploads</strong>.
+            </p>
+            <p class="project-stack">
+              Stack: React.js, Tailwind, Node.js, Express.js, MongoDB, JWT, Multer
+            </p>
+            <div class="project-links">
+              <a href="https://exam-mate-3ty9.vercel.app" target="_blank">🔗 Live</a>
+              <a href="https://github.com/Aditya23-lab/exam-mate" target="_blank">💻 GitHub</a>
+            </div>
+          </article>
 
-        <div class="project">
-          <h3>🏠 House Price Predictor</h3>
-          <p>Regression-based ML model predicting real-estate prices using Python and scikit-learn. Includes preprocessing, feature engineering, and data visualization.</p>
-          <a href="https://github.com/Aditya23-lab/House-Price-Prediction" target="_blank">GitHub</a>
-        </div>
+          <!-- Weather App -->
+          <article class="project-card">
+            <h3>🌤️ Weather App</h3>
+            <p>
+              Dynamic weather application using the OpenWeather API with real-time city search and responsive UI.
+              Designed for a clean, minimal user experience.
+            </p>
+            <p class="project-stack">
+              Stack: HTML, CSS, JavaScript, OpenWeather API
+            </p>
+            <div class="project-links">
+              <a href="https://mausam-git-main-aditya23-labs-projects.vercel.app/" target="_blank">🔗 Live</a>
+              <a href="https://github.com/Aditya23-lab/weather-app" target="_blank">💻 GitHub</a>
+            </div>
+          </article>
 
-        <div class="project">
-          <h3>🤖 Mini RAG System (In Progress)</h3>
-          <p>AI-powered retrieval-augmented generation system using embeddings and prompt engineering for efficient responses.</p>
+          
+
+          <!-- House Price Predictor -->
+          <article class="project-card">
+            <h3>🏠 House Price Predictor – Machine Learning</h3>
+            <p>
+              Implemented a <strong>Random Forest Regression</strong> model for house price prediction, with
+              data preprocessing, feature engineering, and visualizations using Pandas and NumPy.
+            </p>
+            <p class="project-stack">
+              Stack: Python, Pandas, NumPy, scikit-learn, Matplotlib
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/Aditya23-lab/House-Price-Prediction" target="_blank">💻 GitHub</a>
+            </div>
+          </article>
+
+          <!-- Mini RAG -->
+          <article class="project-card">
+            <h3>🎥 Mini RAG – Video Knowledge Retrieval System (In Progress)</h3>
+            <p>
+              Pipeline that converts YouTube videos to audio, transcribes and translates them to English, and maps
+              transcripts to timestamps to retrieve exact video segments discussing a topic.
+            </p>
+            <p class="project-stack">
+              Focus: RAG Systems, Transcription, Retrieval
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ACHIEVEMENTS -->
     <section id="achievements" class="tab">
-      <div class="card">
-        <h2>Achievements & Experience</h2>
-        <ul>
-          <li>Campus Ambassador & Contributor at <strong>GSSoC 2025</strong></li>
-          <li>Delegate – North East India Summit (IIT Guwahati)</li>
-          <li>Participant – TEXMiN Innovation Challenge, NIT Nagaland</li>
-          <li>Drone Workshop (NIELIT) – Hands-on drone design & flight</li>
-          <li><strong>MVP – Inter NIT Cricket Tournament</strong></li>
-          <li>Solved 180+ DSA problems in Java</li>
+      <div class="glass-card section-card">
+        <h2>Achievements</h2>
+        <ul class="list">
+          <li><strong>200+ DSA problems</strong> solved in Java on LeetCode.</li>
+          <li>
+            Completed <strong>Hacktoberfest</strong> with <strong>6 merged PRs</strong> and earned the
+            <strong>Super Contributor</strong> badge.
+          </li>
+          <li>
+            <strong>MVP – Inter NIT Cricket Tournament</strong> (Top run-scorer &amp; wicket-taker).
+          </li>
+          <li>Strong communication and presentation skills demonstrated in college events and collaborations.</li>
+          <li>
+            <strong>Delegate</strong> at North East India Summit (IIT Guwahati),
+            <strong>Participant</strong> at TEXMiN Innovation Challenge (NIT Nagaland),
+            and <strong>Drone Workshop</strong> at NIELIT.
+          </li>
+          <li><strong>Campus Ambassador &amp; Contributor</strong>, GSSoC 2025 (Remote).</li>
         </ul>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="tab">
-      <div class="card">
+      <div class="glass-card section-card">
         <h2>Get in Touch</h2>
-        <p>📧 <a href="mailto:sandilyaa577@gmail.com">sandilyaa577@gmail.com</a></p>
-        <p>🔗 <a href="https://linkedin.com/in/aditya-raj-singh-2506a5310" target="_blank">LinkedIn</a></p>
-        <p>💻 <a href="https://github.com/Aditya23-lab" target="_blank">GitHub</a></p>
-        <p>🌐 <a href="https://portfolio-pje0j2zv5-aditya23-labs-projects.vercel.app" target="_blank">Portfolio</a></p>
+        <p>
+          I’m actively looking for opportunities in
+          <strong>Software Development, Full Stack Development, and Data/AI Internships.</strong>
+        </p>
+
+        <div class="contact-grid">
+          <div>
+            <h3>Direct</h3>
+            <p>📧 <a href="mailto:sandilyaa577@gmail.com">sandilyaa577@gmail.com</a></p>
+            <p>📱 <a href="tel:+917488846594">+91-7488846594</a></p>
+          </div>
+          <div>
+            <h3>Profiles</h3>
+            <p>🔗 <a href="https://linkedin.com/in/aditya-raj-singh-2506a5310" target="_blank">LinkedIn</a></p>
+            <p>🏆 <a href="https://leetcode.com/u/aad_it_ya/" target="_blank">LeetCode</a></p>
+
+            <p>💻 <a href="https://github.com/Aditya23-lab" target="_blank">GitHub</a></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Aditya Raj Singh. Built with ❤️ using HTML, CSS & JavaScript.</p>
+    <p>© 2025 Aditya Raj Singh · Built with HTML, CSS &amp; a lot of ☕</p>
   </footer>
 
   <script>
-    // Tab switch
     const buttons = document.querySelectorAll('.tab-btn');
     const tabs = document.querySelectorAll('.tab');
 
-    buttons.forEach(btn => {
+    buttons.forEach((btn) => {
       btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
+        buttons.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
-        tabs.forEach(tab => tab.classList.remove('active'));
-        document.getElementById(btn.dataset.tab).classList.add('active');
-      });
-    });
 
-    // Dark mode toggle
-    const toggleBtn = document.getElementById("theme-toggle");
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      toggleBtn.textContent =
-        document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+        const targetId = btn.dataset.tab;
+        tabs.forEach((tab) => {
+          if (tab.id === targetId) {
+            tab.classList.add('active');
+          } else {
+            tab.classList.remove('active');
+          }
+        });
+      });
     });
   </script>
 </body>
 </html>
+
